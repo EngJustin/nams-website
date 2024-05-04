@@ -5,30 +5,54 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>nams logo</title>
 	<style type="text/css">
-
-
-
-
 		body {
 			padding-top: 60px;
 			font-family: helvetica;
 			margin: 0px;
 		}
 		@media only screen and (max-width: 500px) {
-			.heading {
-				font-size: 50%;
-			}
-			.stationaries-container {
+			.buttons {
 				display: flex;
-				flex-direction: row;
+				flex-direction: column;
+				row-gap: 10px;
+				align-items: flex-end;
+				justify-content: space-around;
+				margin-top: 120px;
+			}
+			.heading-container {
+				width: 100%;
+				overflow: hidden;
+				height: auto;
+			}
 
+			.heading-container .heading{
+				font-size: 50px;
+				line-height: 70px;
 			}
-			#stationaries1 {
-				max-width: 90%;
+			.intro-container .intro {
+				font-size: 15px;
 			}
-			.intro {
-				font-size: 10px;
+			.intro-container .about {
+				font-size: 18px;
+				display: flex;
 			}
+			.services .services-list ul li{
+				font-size: 15px;
+				line-height: 15px;
+			}
+			.services {
+				margin-left: auto;
+				margin-right: auto;
+				display: grid;
+				grid-template-columns: 1fr 2fr 1fr;
+				max-width: 95%;
+				grid-gap: 20px; 
+			}
+			body {
+				font-size: 20px;
+			}
+			
+			
 		}
 
 		.navbar {
@@ -78,7 +102,7 @@
 			font-size: 15px;
 			height: 30px;
 			width: 100px;
-			box-shadow: 0 0 5px cyan, 0 0 15px cyan;
+			
 		}
 		#button:hover {
 			border: solid rgb(227, 30, 16, 1.0) ;
@@ -106,7 +130,6 @@
 			margin-bottom: 20px;
 			align-items: center;
 			overflow: hidden;
-			z-index: -2;
 			
 		}
 		.background-clip {
@@ -118,13 +141,18 @@
 			z-index: -2;
 			
 		}
+		.heading-container {
+			display: flex;
+		}
 		
 		.heading {
 			margin-top: 0px;
-			font-family: monaco;
-			font-size: 120px;
+			font-family: helvetica;
+			font-size: 100px;
 			text-align: center;
-			color: tomato;
+			color: whitesmoke;
+			align-items: center;
+			line-height: 200px;
 		}
 		.stationaries-container {
 			display: grid;
@@ -157,6 +185,8 @@
 
 		}
 		.about {
+			display: flex;
+			justify-content: center;
 			width: 200px;
 			text-align: center;
 			padding: 10px;
@@ -193,6 +223,17 @@
 			border: solid tomato 2px;
 			border-radius: 20px;
 		}
+		.printing-container {
+			position: relative;
+		}
+		.printer {
+			position: absolute;
+			bottom: 170px;
+			left: 10px;
+			background-color: black;
+			color: white;
+			padding: 12px;
+		}
 		.printing{
 			background-color: lightgrey;
 			padding: 10px;
@@ -216,6 +257,7 @@
 
 
 		.images2-grid{
+			position: relative;
 			margin-left: auto;
 			margin-right: auto;
 			margin-top: 20px;
@@ -336,18 +378,19 @@
 				SMART PRINTING AND STATIONARY SUPPLIES
 			</h1>
 		</div>
-		
-		<div class="stationaries-container">
-			<img id="stationaries1" src="images/stationaries.jpeg">
-			<img id="stationaries1" src="images/stationaries2.jpg">
-			<img id="stationaries1" src="images/stationaries3.jpeg">
-		</div>
 		<div class="intro-container">
 			<h1 id="about" class="about">ABOUT</h1>
 			<p  class="intro">
 				Welcome to namsprint, your one-stop destination for all your printing and stationery needs.We are located on sunrise street, Juja Kiambu and We specialize in providing high-quality printing solutions tailored to meet your unique requirements. From business cards to brochures, invitations to letterheads, we offer a comprehensive range of services to help you leave a lasting impression. With a commitment to excellence and customer satisfaction, we strive to deliver exceptional results on time, every time. Explore our services and let us help bring your ideas to life!
 			</p>
 		</div>
+		
+		<div class="stationaries-container">
+			<img id="stationaries1" src="images/stationaries.jpeg">
+			<img id="stationaries1" src="images/stationaries2.jpg">
+			<img id="stationaries1" src="images/stationaries3.jpeg">
+		</div>
+		
 	</section>
 
 	<section class="services-section">
@@ -364,23 +407,27 @@
 			
 			<div class="services-list">
 				<ul>
-				<li>Printing</li>
-				<li>Photocopying</li>
-				<li>scanning</li>
-				<li>laminating</li>
-				<li>photo framing</li>
-				<li>e-citizen services
-					<ul>
-						<li>Returns filling</li>
-						<li>DL reneweal</li>
-						<li>KRA pins</li>
-					</ul>
-				</li>
+					<li>Printing</li>
+					<li>Photocopying</li>
+					<li>scanning</li>
+					<li>laminating</li>
+					<li>photo framing</li>
+					<li>e-citizen services
+						<ul>
+							<li>Returns filling</li>
+							<li>DL reneweal</li>
+							<li>KRA pins</li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 
 			<div class="printing-container">
 				<img class="printing" src="images/printing.jpg">
+				<div class="printer">printer</div>	
+				
+				
+				
 			</div>
 		</div>
 		<div class="images2-grid">
@@ -393,6 +440,9 @@
 
 			<div>
 				<img class="framing" src="images/framing.jpg">
+			</div>
+			<div class="framing">
+				photo framing
 			</div>
 		</div>
 			
