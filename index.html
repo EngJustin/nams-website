@@ -7,6 +7,7 @@
 	<style type="text/css">
 		body {
 			padding-top: 60px;
+			padding bottom: 20px;
 			font-family: helvetica;
 			margin: 0px;
 		}
@@ -36,9 +37,18 @@
 				font-size: 18px;
 				display: flex;
 			}
+			.services .services-list {
+				margin: 0px;
+			}
 			.services .services-list ul li{
 				font-size: 15px;
 				line-height: 15px;
+				padding: 0px;
+			}
+			.services .printing {
+				padding: 0px;
+			}
+			.services .laminating {
 				padding: 0px;
 			}
 			.services {
@@ -49,8 +59,11 @@
 				max-width: 95%;
 				grid-gap: 10px; 
 			}
-			body {
-				font-size: 20px;
+
+											<!--PRODUCTS-->
+			.list {
+				font-size: 15px;
+				line-height: 15px;
 			}
 			
 			
@@ -66,7 +79,7 @@
 			flex-direction: row;
 			height: 60px;
 			align-items: center;
-			background-color: rgba(0, 0, 0, 0.2);
+			background-color: white;
 
 		}
 		.logo-container {
@@ -203,120 +216,181 @@
 			padding: 10px;
 			border: solid tomato 2px;
 		}
+
+
+												<!--SERVICES-->
 		.service-header {
 			text-align: center;
 			font-size: 25px;
 			font-family: helvetica;
 		}
 		.services {
-			margin-left: auto;
-			margin-right: auto;
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
+			display: flex;
+			flex-direction: row;
 			max-width: 95%;
-			grid-gap: 10px; 
-		}
-		
-		.laminating {
-			background-color: lightgrey;
-			padding: 10px;
-			width: 95%;
-			border: solid tomato 2px;
-			border-radius: 20px;
-		}
-		.printing-container {
-			position: relative;
-		}
-		.printer {
-			position: absolute;
-			bottom: 170px;
-			left: 10px;
-			background-color: black;
-			color: white;
-			padding: 12px;
-		}
-		.printing{
-			background-color: lightgrey;
-			padding: 10px;
-			width: 90%;
-			border: solid tomato 2px;
-			border-radius: 20px;
-			object-fit: cover;
-
+			column-gap: 5px; 
 		}
 		.services-list {
-			width: 90%;
-			border: solid tomato 2px;
-			border-radius: 20px;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+			background-color: lightgrey;
+			width: 100%;
+			border-radius: 5px;
+		}
+		.framing2,
+		.service-list {
+			width: 100%;
+			flex: 1;
+			object-fit: cover;
+			object-position: center;
+
 		}
 		.services-list ul li {
-			font-size: 25px;
-			line-height: 30px;
+			font-size: 15px;
+			line-height: 20px;
 
 		}
+		.services-images {
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+			row-gap: 10px;
+		}
+		.laminating,
+		.printing {
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
 
-
-
-		.images2-grid{
-			position: relative;
-			margin-left: auto;
-			margin-right: auto;
-			margin-top: 20px;
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			max-width: 95%;
-			grid-gap: 20px;
+		.services-images2 {
+			display: flex;
+			flex-direction: column;
+			row-gap: 10Px;
+			flex: 1;
+		}
+		.framingwebp,
+		.ecitizen {
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	
 		}
 		.framing2,
 		.framing,
 		.ecitizen {
-			padding: 10px;
+			padding: 5px;
 			background-color: lightgrey;
-			width: 95%;
-			border: solid tomato 2px;
-			border-radius: 20px;
+			width: 100%;
+			border-radius: 5px;
 			
 
 		}
 
+											<!--PRODUCTS-->
 		.products-header {
+			border: solid red;
 			margin-top: 20px;
-			
-			text-align: center;
 			font-size: 25px;
 			font-family: helvetica;
 		}
 		.products {
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 95%;
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			grid-gap: 20px;
+			max-width: 100%;
+			display: flex;
+			flex-direction: row;
+			column-gap: 10px;
 		}
-		#image {
-			padding: 10px;
+		.products-image1{
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+			flex: 1;
+			padding: 2.5px;
 			background-color: lightgrey;
-			width: 95%;
-			border: solid tomato 2px;
-			border-radius: 20px;
+			max-width: 100%;
+			border-radius: 5px;
 		}
-		.products ul li {
-			font-size: 25px;
-			line-height: 25px;
-				
-		}
-		.products ul {
-			padding-top: 20px;
-			border: solid tomato 2px;
-			border-radius: 20px;
+		.pic,
+		.inkcatrige {
+			object-fit: cover;
+			object-position: center;
+			overflow: hidden;
+			flex: 1;
+			max-width: 100%;
 		}
 		
+		.products-image2 {
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+			flex: 1;
+			padding: 2.5px;
+			background-color: lightgrey;
+			max-width: 100%;
+			border-radius: 5px;
+		}
+		.envelope,
+		.aone {
+			object-fit: cover;
+			object-position: center;
+			overflow: hidden;
+			flex: 1;
+			max-width: 100%;
+		}
+
+		#image {
+			max-width: 100%;
+		}
+		.products-list {
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
+			flex: 1;
+		}
+
+		.hpprinter2,
+		.list,
+		.printer {
+			flex: 1;
+			max-width: 100%;
+		}
+		.list {
+			font-size: 30px;
+			line-height: 30px;
+		}
+				
+		}
+		
+
+												<!--CONTACTS-->>	
 		.contacts {
-			height: 50px;
-			background-color: rgb(0, 0, 0, 0.5);
+			border: solid red 2px;
+			display: flex;
+			flex-direction: row;
+			r: 10px;
+			justify-content: space-between;
+			align-items: center;
+			height: 100px;
+			background-color: blue;
 			text-align: center;
 			padding-bottom: 50px;
+		}
+		.email {
+			border: solid red 2px;
+			background-color: black;
+			color: white;
+			padding: 10px;
+			display: inline-block;
+		}
+		.phone1,
+		.phone2 {
+			background-color: black;
+			color: white;
+			padding: 10px;
+			display: inline-block;
 		}
 		.contacts a {
 			text-decoration: none;
@@ -403,13 +477,9 @@
 		</div>
 
 		<div class="services">
-			
-			<div class="laminating-container">
-				<img class="laminating" src="images/laminating.jpg">
-			</div>
-			
 			<div class="services-list">
-				<ul>
+
+				<ul class="service-list">
 					<li>Printing</li>
 					<li>Photocopying</li>
 					<li>scanning</li>
@@ -423,74 +493,75 @@
 						</ul>
 					</li>
 				</ul>
+				<img class="framing2" src="images/framing2.jpg">
 			</div>
 
-			<div class="printing-container">
-				<img class="printing" src="images/printing.jpg">
-				<div class="printer">printer</div>	
-				
+			<div class="services-images">
+				<img class="laminating" src="images/laminating.jpg">
+				<img class="printing" src="images/printing.jpg">	
 			</div>
-		</div>
-		<div class="images2-grid">
-			<div >
+
+			<div class="services-images2">
+				<img class="framingwebp" src="images/framing.webp">
 				<img class="ecitizen" src="images/ecitizen.png">
 			</div>
-			<div >
-				<img  class="framing2" src="images/framing2.jpg">
-			</div>
-
-			<div>
-				<img class="framing" src="images/framing.jpg">
-			</div>
-			<div class="framing">
-				photo framing
-			</div>
+			
 		</div>
 			
 	</section>
 
 	<section class="products-section">
 		<div>
-			<h1 id="products" class="products-header">PRODUCTS</h1>
+			<h1 class="products-header">PRODUCTS</h1>
 		</div>
 		<div class="products">
-			
-
-			<div>
-				<img id="image" src="images/pic.jpg">
+			<div class="products-list">
+				<img class="inkcatrige" src="images/inkcatrige.jpg">
+				
+				<img class="hpprinter2" src="images/hpprinter2.webp">
+				<img class="printer" src="images/hpprinter.jpg">
 			</div>
-			<ul>
-				<li>Printers</li>
-				<li>ink catriges</li>
-				<li>printing papers</li>
-				<li>envelops</li>
-				<li>Books</li>
-			</ul>
-			<div class="products-image">
-				<img id="image" src="images/aone.jpg">
+			
+			<div class="products-image1">
+				<ul class="list">
+					<li>Printers</li>
+					<li>Ink catriges</li>
+					<li>printing papers</li>
+					<li>Envelops</li>
+					<li>Books</li>
+					<li>Staplers</li>
+					<li>Hole punchers</li>
+				</ul>
+				<img class="pic" id="image" src="images/pic.jpg">
+			</div>
+			<div class="products-image2">
+				<img class="envelope" src="images/envelope.jpg">
+				<img class="aone" id="image" src="images/aone.jpg">
 			</div>
 		</div>
 		
 	</section>
-	<section>
+	<section class="contacts-ection">
+		<h1 id="contacts">contacts</h1>
 		<div class="contacts">
-			<h1 id="contacts">contacts</h1>
-			<div>
-				<a href="mailto:namprints@gmail.com">justinkim741@gamil.com</a>
+			<div class="email">
+				<a href="mailto:namprints@gmail.com">namprints@gmail.com</a>
 			</div>
-			<div>
+
+			<div class="phone1">
 				<a href="tel:0722149841">0722149841</a>
 			</div>
-			<div>
+
+			<div class="phone2">
 				<a href="tel:0706569436">0706569436</a>
 			</div>
 		</div>
-		<div>
-			<a href=""></a><button>back to top</button>
-		</div>
+		
 	</section>
-	<button onclick="topFunction()" id="myBtn" >Go Top</button>
+		
+		<button onclick="topFunction()" id="myBtn" >Go Top</button>
 	<script>
+		
 
 		// Get the button
 		let mybutton = document.getElementById("myBtn");
