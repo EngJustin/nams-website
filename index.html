@@ -15,7 +15,7 @@
 			.buttons {
 				display: flex;
 				flex-direction: column;
-				row-gap: 10px;
+				row-gap: 5px;
 				align-items: flex-end;
 				justify-content: space-around;
 				margin-top: 120px;
@@ -24,6 +24,12 @@
 				width: 100%;
 				overflow: hidden;
 				height: auto;
+			}
+			.buttons #button {
+				font-size: 12px;
+				height: 20px;
+				width: 70px;
+
 			}
 
 			.heading-container .heading{
@@ -59,14 +65,40 @@
 				max-width: 95%;
 				grid-gap: 10px; 
 			}
+			.slideshow-container .slideshow {
+				height: 50%;
+			}
+			.slideshow-container {
+				height: 300px;
+				display: flex;
+				justify-content: center;
+			}
+			.products .products-image1 ul li {
+				font-size: 15px;
+				line-height: 15px;
+			}
 
 											<!--PRODUCTS-->
 			.list {
 				font-size: 15px;
 				line-height: 15px;
 			}
+			.contacts .phone1,
+			.contacts .phone2,
+			.contacts .email {
+				padding: 5px;
+				font-size: 10;
+			}
 			
 			
+		}
+
+		.divider {
+			height: 3px;
+			width: 100%;
+			background-color: red;
+			margin-top: 10px;
+			margin-bottom: 10px;
 		}
 
 		.navbar {
@@ -168,24 +200,16 @@
 			align-items: center;
 			line-height: 200px;
 		}
-		.stationaries-container {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
+	
+		
+		.about {
 			margin-left: auto;
 			margin-right: auto;
-			column-gap: 20px;
-			height: auto;
-			max-width: 95%;
-
-		}
-		#stationaries1 {
+			width: 200px;
+			text-align: center;
 			padding: 10px;
+			border-radius: 50px;
 			background-color: lightgrey;
-			width: 95%;
-			border: 2px solid tomato;
-			border-radius: 30px;
-			padding: 5px;
-			border-radius: 20px;
 		}
 		.intro-container {
 			margin-top: 20px;
@@ -198,15 +222,6 @@
 			height: auto;
 
 		}
-		.about {
-			display: flex;
-			justify-content: center;
-			width: 200px;
-			text-align: center;
-			padding: 10px;
-			border-radius: 50px;
-			background-color: lightgrey;
-		}
 		.intro {
 			font-size: 25px;
 			text-align: center;
@@ -217,12 +232,29 @@
 			border: solid tomato 2px;
 		}
 
+		.slideshow-container {
+			height: auto;
+			display: flex;
+			justify-content: center;
+		}
+		.slideshow {
+			object-fit: fit;
+			object-position: center;
+			height: 500px;
+			display:none;
+			width: 90%;
+		}
+
 
 												<!--SERVICES-->
-		.service-header {
+		.products-header {
+			margin-left: auto;
+			margin-right: auto;
+			width: 200px;
 			text-align: center;
-			font-size: 25px;
-			font-family: helvetica;
+			padding: 10px;
+			border-radius: 50px;
+			background-color: lightgrey;
 		}
 		.services {
 			display: flex;
@@ -291,11 +323,14 @@
 		}
 
 											<!--PRODUCTS-->
-		.products-header {
-			border: solid red;
-			margin-top: 20px;
-			font-size: 25px;
-			font-family: helvetica;
+		.services-header {
+			margin-left: auto;
+			margin-right: auto;
+			width: 200px;
+			text-align: center;
+			padding: 10px;
+			border-radius: 50px;
+			background-color: lightgrey;
 		}
 		.products {
 			max-width: 100%;
@@ -366,19 +401,25 @@
 		
 
 												<!--CONTACTS-->>	
-		.contacts {
-			border: solid red 2px;
+		
+		
+		.contacts-section {
 			display: flex;
 			flex-direction: row;
-			r: 10px;
-			justify-content: space-between;
+			column-gap: 10px;
+			margin-bottom: 10px;
+		}
+		.contacts {
+			width: 95%;
+			display: flex;
+			flex-direction: column;
+			row-gap: 10px;
 			align-items: center;
 			height: 100px;
-			background-color: blue;
-			text-align: center;
-			padding-bottom: 50px;
+			margin-bottom: 20px;
 		}
 		.email {
+			flex: 2;
 			border: solid red 2px;
 			background-color: black;
 			color: white;
@@ -387,6 +428,7 @@
 		}
 		.phone1,
 		.phone2 {
+			flex: 1;
 			background-color: black;
 			color: white;
 			padding: 10px;
@@ -395,12 +437,17 @@
 		.contacts a {
 			text-decoration: none;
 			color: white;
-			margin-bottom: 10px;
+		}
+		#contacts {
+			margin-left: auto;
+			margin-right: auto;
+			width: 200px;
+			text-align: center;
+			padding: 10px;
+			border-radius: 50px;
+			background-color: lightgrey;
 		}
 
-		#contacts {
-			margin:  0px;
-		}
 
 
 
@@ -455,31 +502,39 @@
 				SMART PRINTING AND STATIONARY SUPPLIES
 			</h1>
 		</div>
+
+		<div class="divider"></div>
+
+		<h1 id="about" class="about">ABOUT</h1>
+
+		<div class="divider"></div>
+
 		<div class="intro-container">
-			<h1 id="about" class="about">ABOUT</h1>
+			
 			<p  class="intro">
 				Welcome to namsprint, your one-stop destination for all your printing and stationery needs.We are located on sunrise street, Juja Kiambu and We specialize in providing high-quality printing solutions tailored to meet your unique requirements. From business cards to brochures, invitations to letterheads, we offer a comprehensive range of services to help you leave a lasting impression. With a commitment to excellence and customer satisfaction, we strive to deliver exceptional results on time, every time. Explore our services and let us help bring your ideas to life!
 			</p>
 		</div>
 		
-		<div class="stationaries-container">
-			<img id="stationaries1" src="images/stationaries.jpeg">
-			<img id="stationaries1" src="images/stationaries2.jpg">
-			<img id="stationaries1" src="images/stationaries3.jpeg">
+		<div class="slideshow-container">
+			<img class="slideshow" src="images/stationaries.jpeg">
+			<img class="slideshow" src="images/stationaries2.jpg">
+			<img class="slideshow" src="images/stationaries3.jpeg">
 		</div>
 		
 	</section>
-
+	<div class="divider"></div>
+	
+		
+	<h1 id="services" class="services-header">SERVICES</h1>
+	<div class="divider"></div>
+	
 	<section class="services-section">
 		
-		<div class="service-header-container">
-			<h1 id="services" class="service-header">SERVICES</h1>
-		</div>
-
 		<div class="services">
 			<div class="services-list">
 
-				<ul class="service-list">
+				<ul  class="service-list">
 					<li>Printing</li>
 					<li>Photocopying</li>
 					<li>scanning</li>
@@ -511,9 +566,11 @@
 	</section>
 
 	<section class="products-section">
-		<div>
-			<h1 class="products-header">PRODUCTS</h1>
-		</div>
+	<div class="divider"></div>
+	
+	<h1 class="products-header">PRODUCTS</h1>
+
+	<div class="divider"></div>
 		<div class="products">
 			<div class="products-list">
 				<img class="inkcatrige" src="images/inkcatrige.jpg">
@@ -523,7 +580,7 @@
 			</div>
 			
 			<div class="products-image1">
-				<ul class="list">
+				<ul id="products" class="list">
 					<li>Printers</li>
 					<li>Ink catriges</li>
 					<li>printing papers</li>
@@ -541,19 +598,23 @@
 		</div>
 		
 	</section>
-	<section class="contacts-ection">
-		<h1 id="contacts">contacts</h1>
+	<section class="contacts-section">
+		<div class="divider"></div>
+
+		<h1 id="contacts">CONTACTS</h1>
+
+		<div class="divider"></div>
 		<div class="contacts">
 			<div class="email">
-				<a href="mailto:namprints@gmail.com">namprints@gmail.com</a>
+				<a href="mailto:namprints@gmail.com">Email: namprints@gmail.com</a>
 			</div>
 
 			<div class="phone1">
-				<a href="tel:0722149841">0722149841</a>
+				<a href="tel:0722149841">Call: 0722149841</a>
 			</div>
 
 			<div class="phone2">
-				<a href="tel:0706569436">0706569436</a>
+				<a href="tel:0706569436">Call: 0706569436</a>
 			</div>
 		</div>
 		
@@ -561,7 +622,23 @@
 		
 		<button onclick="topFunction()" id="myBtn" >Go Top</button>
 	<script>
-		
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+		  var i;
+		  var x = document.getElementsByClassName("slideshow");
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none";  
+		  }
+		  myIndex++;
+		  if (myIndex > x.length) {myIndex = 1}    
+		  x[myIndex-1].style.display = "block";  
+		  setTimeout(carousel, 2000); // Change image every 2 seconds
+		}
+
+
+
 
 		// Get the button
 		let mybutton = document.getElementById("myBtn");
